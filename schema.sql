@@ -1,9 +1,11 @@
+DROP TABLE IF EXISTS Books;
+
 CREATE TABLE Books (
     Id SERIAL PRIMARY KEY,
-    Title VARCHAR(100),
-    Author VARCHAR (500),
+    Title VARCHAR(100) NOT NULL,
+    Author VARCHAR (500) NOT NULL,
     Genre VARCHAR(1000),
-    IsCheckedOut BOOLEAN,
+    IsCheckedOut BOOLEAN NOT NULL,
     Rating NUMERIC(5,2),
     DatePurchased DATE
 )
